@@ -1,0 +1,26 @@
+import nltk
+from nltk.corpus import wn
+
+pairs = {'car': 'automobile',
+         'gem': 'jewel',
+         'journey': 'car',
+         'boy': 'lad',
+         'coast': 'forest',
+         'asylum': 'madhouse',
+         'magician': 'wizard',
+         'midday': 'noon',
+         'furnace': 'stove',
+         'food': 'rooster',
+         'bird': 'crane', 
+         'tool': 'implement',
+         'brother': 'monk',
+         'lad': 'wizard',
+         'crane': 'implement',
+         'monk': 'slave',
+         'cemetery': 'woodland',
+         'forest': 'graveyard', 
+         'shore': 'woodland', 
+         'chord': 'smile', 
+         'glass': 'magician', 
+         'rooster': 'voyage', 
+         'noon': 'string'}
