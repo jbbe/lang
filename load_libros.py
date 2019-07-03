@@ -22,14 +22,19 @@ def print_stats(corp):
 # corpus_root = '/usr/share/dict'
 # wordlists = PlaintextCorpusReader(corpus_root, '.*')
 corpus_root = '/Users/jbbe/interesa/txt_books'
-file_names = ['amuleto.txt', 'estrella_distante.txt', 'putas_asesinas.txt', 'det_salv_bol.txt', 
+file_names = ['amuleto.txt', 'estrella_distante.txt', 'putas_asesinas.txt', 'det_salv_bol.txt', 'sav_det.txt',
                 'la_invencion_de_morel.txt', 'don_quixote.txt', 
                 'borges_ficc.txt', 'hot_sur.txt', 'diez_muj.txt', 'rayuela-cortazar.txt']
+english_names = ['sav_dat.txt']
+bol_novels = ['amuleto.txt', 'amulet_mine.txt', 'estrella_distante.txt',
+                'putas_asesinas.txt', 'det_salv_bol.txt', 'sav_det.txt', '2666.txt']
 books = PlaintextCorpusReader(corpus_root, file_names)
+eng_books = PlaintextCorpusReader(corpus_root, english_names)
 # print(len(books.sents('amuleto.txt')))
-
+# print(len(books.words('borges_ficc.txt')))
+# print(len(books.words('borges_ficc.txt')))
 # print(len(books.sents('putas_asesinas.txt')))
-# print_stats(books)
+print_stats(books)
 # cfd = nltk.ConditionalFreqDist(
 # 	(target, fileid[:4])
 # 	for fileid in books.fileids()
@@ -365,7 +370,7 @@ def zipf(text):
         plt.plot(x_coordinate, sorted(freqs, reverse=True))
         plt.show()
 
-zipf(big_spanish_text)
+# zipf(big_spanish_text)
 
 def gen_rnd_txt(length=100):
         txt = ''
