@@ -1,5 +1,4 @@
 import nltk, re
-Conditional
 
 ham = open('/Users/jbbe/interesa/txt_books/hamlet.txt').read().strip() 
 
@@ -64,8 +63,8 @@ Now get you to my lady's chamber, and tell her, let
 her paint an inch thick, to this favour she must
 come; make her laugh at that. """
 
-# print(to_hacker(alas))
+print(to_hacker(alas))
 
 
-print(to_pig_latin_text(alas))
-print(to_pig_latin_word('style'))
+# print(to_pig_latin_text(alas))
+# print(to_pig_latin_word('style'))

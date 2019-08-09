@@ -197,4 +197,3 @@ now, to mock your own grinning? quite chap-fallen?
 Now get you to my lady's chamber, and tell her, let
 her paint an inch thick, to this favour she must
 come; make her laugh at that. """
-""

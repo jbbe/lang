@@ -200,21 +200,21 @@ def wordnet_list(word):
 
 # from nltk.corpus import verbnet as vn
 # print(len([noun for noun in wn.all_synsets('n') if noun.hyponyms() == []]))
-# union = nltk.corpus.state_union
-# for speech in union.fileids():
-#         men = union.raw(speech).count('men')
-#         women = union.raw(speech).count('women')
-#         people = union.raw(speech).count('people')
-#         print(speech, men, women, people)
+union = nltk.corpus.state_union
+for speech in union.fileids():
+        men = union.raw(speech).count('men')
+        women = union.raw(speech).count('women')
+        people = union.raw(speech).count('people')
+        print(speech, men, women, people)
 
-# cfd = nltk.ConditionalFreqDist(
-#                  	(target, fileid[:4])
-# 	                for fileid in union.fileids()
-# 	                for w in union.words(fileid)
-# 	                for target in ['men', 'women', 'people']
-# 	                if w.lower().startswith(target))
+cfd = nltk.ConditionalFreqDist(
+                 	(target, fileid[:4])
+	                for fileid in union.fileids()
+	                for w in union.words(fileid)
+	                for target in ['men', 'women', 'people']
+	                if w.lower().startswith(target))
 
-# cfd.plot()
+cfd.plot()
 
 # from nltk.corpus import brown
 # for cat in brown.categories():
