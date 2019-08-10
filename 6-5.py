@@ -35,7 +35,7 @@ print(bayes_classifier.show_most_informative_features(10))
 tree_classifier = nltk.DecisionTreeClassifier.train(train_set)
 print('tree', nltk.classify.accuracy(tree_classifier, devtest_set))
 print('tree', nltk.classify.accuracy(tree_classifier, test_set))
-print(tree_classifier.pseudocode())
+print(tree_classifier.pseudocode(4))
 
 max_ent_classifier = nltk.MaxentClassifier.train(train_set)
 print('maxenttree', nltk.classify.accuracy(max_ent_classifier, devtest_set))

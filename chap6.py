@@ -1,6 +1,12 @@
 import nltk, random
 from nltk.corpus import names
 from nltk.classify import apply_features
+import math
+
+def entropy(labels):
+    freqdist = nltk.FreqDist(labels)
+    probs = [freqdist.freq(l) for l in freqdist]
+    return -sum(p * math.log(p,2) for p in probs)
 
 def gender_features(w):
     return {'last_letter': w[-1:].lower(), 
@@ -70,6 +76,7 @@ def document_features(document):
         features['contains({})'.format(word)] = (word in document_words)
     return features
 
+#
 # featuresets = [(document_features(d), c) for (d,c) in documents]
 # train_set, test_set = featuresets[100:], featuresets[:100]
 # classifier = nltk.NaiveBayesClassifier.train(train_set)
@@ -244,4 +251,3 @@ print(extractor.text_words)
 print(extractor.hyp_words)
 print(extractor.overlap('word'))
 print(extractor.overlap('ne'))
-print(extractor.hyp_extra('word'))
