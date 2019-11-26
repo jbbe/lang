@@ -38,14 +38,14 @@ classifier = nltk.NaiveBayesClassifier.train(train_set)
 
 print(nltk.classify.accuracy(classifier, test_set)) 
 # featuresets = [(document_features_lanc(d), c) for (d,c) in documents]
-# train_set, test_set = featuresets[size:], featuresets[:size]
-# # print(len(featuresets))
-# classifier = nltk.NaiveBayesClassifier.train(train_set)
+train_set, test_set = featuresets[size:], featuresets[:size]
+# print(len(featuresets))
+classifier = nltk.NaiveBayesClassifier.train(train_set)
 
-# print(nltk.classify.accuracy(classifier, test_set)) 
-# featuresets = [(document_features_port(d), c) for (d,c) in documents]
-# train_set, test_set = featuresets[size:], featuresets[:size]
-# # print(len(featuresets))
-# classifier = nltk.NaiveBayesClassifier.train(train_set)
+print(nltk.classify.accuracy(classifier, test_set)) 
+featuresets = [(document_features_port(d), c) for (d,c) in documents]
+train_set, test_set = featuresets[size:], featuresets[:size]
+# print(len(featuresets))
+classifier = nltk.NaiveBayesClassifier.train(train_set)
 
-# print(nltk.classify.accuracy(classifier, test_set)) 
+print(nltk.classify.accuracy(classifier, test_set)) 

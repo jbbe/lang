@@ -149,6 +149,7 @@ output = open('t3.pkl', 'wb')
 dump(t3, output, -1)
 output.close()
 
+
 from pickle import load
 input = open('t3.pkl', 'rb')
 tagger = load(input)
